@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/api/*"
+  to = "http://213.154.90.58:8000/api/:splat"
+  status = 200
+  force = true
+
+# 2️⃣ React Router fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
