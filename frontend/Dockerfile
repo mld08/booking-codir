@@ -28,7 +28,7 @@ FROM nginx:mainline-alpine
 
 # Copier le build généré vers nginx
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+#COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Exposer le port
 #EXPOSE 80
