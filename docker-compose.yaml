@@ -4,7 +4,7 @@ services:
   backend:
     build: ./backend
     env_file:
-      - .env
+      - ./backend/.env
     depends_on:
       - db
     environment:
@@ -20,13 +20,13 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
-      - .env
+      - ./backend/.env
     restart: unless-stopped
 
   frontend:
     build: ./frontend
     env_file:
-      - .env
+      - ./frontend/.env
     depends_on:
       - backend
     container_name: frontend-booking
