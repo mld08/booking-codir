@@ -19,9 +19,12 @@ services:
     image: postgres:15-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    env_file:
-      - ./backend/.env
-    restart: unless-stopped
+    environment:
+      POSTGRES_USER: booking_user
+      POSTGRES_DB: booking
+      POSTGRES_PASSWORD: J7$kP9mX2@vR5!qW8*zN3&bL6
+    restart: always
+    container_name: postgres-booking
 
   frontend:
     build: ./frontend

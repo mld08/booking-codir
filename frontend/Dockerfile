@@ -23,11 +23,16 @@ RUN chmod +x node_modules/.bin/vite
 # Construire le build de production
 RUN npm run build
 
-# Étape 2 : serveur nginx
-FROM nginx:mainline-alpine
+RUN npm install -g serve
+EXPOSE 3000
 
-# Copier le build généré vers nginx
-COPY --from=build /app/dist /usr/share/nginx/html
+CMD ["serve", "-s", "build", "-l", "3000"]
+
+# Étape 2 : serveur nginx
+# FROM nginx:mainline-alpine
+
+# # Copier le build généré vers nginx
+# COPY --from=build /app/dist /usr/share/nginx/html
 #COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Exposer le port
