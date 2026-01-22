@@ -17,13 +17,13 @@ class Command(BaseCommand):
         
         # 3. Créer les nouveaux axes
         new_axes = [
-            "Thies - Mbour - Saly",
-            "Diourbel - Touba",
-            "Louga - Saint Louis - Podor",
-            "Linguere - Matam - Bakel",
+            "Thies - Mbour - Saly - Tivaouane",
+            "Diourbel - Bambey - Touba",
+            "Louga - Saint Louis - Richard Toll",
+            "Podor - Linguere - Matam",
             "Fatick - Kaolack - Kaffrine",
-            "Tamba - Kedougou",
-            "Zig - Sedhiou - Kolda"
+            "Tambacounda - Kedougou - Bakel",
+            "Ziguinchor - Sedhiou - Kolda"
         ]
         
         self.stdout.write(f"Création de {len(new_axes)} nouveaux axes...")
